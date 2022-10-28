@@ -22,7 +22,9 @@ function submit() {
   // input
   const baseLength = parseFloat(document.getElementById("base-length").value)
   const baseWidth = parseFloat(document.getElementById("base-width").value)
-  const pyramidHeight = parseFloat(document.getElementById("pyramid-height").value)
+  const pyramidHeight = parseFloat(
+    document.getElementById("pyramid-height").value
+  )
 
   // process
   const pyramidVolume = (baseLength * baseWidth * pyramidHeight) / 3
