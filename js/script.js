@@ -11,13 +11,23 @@
  */
 
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-Template-PWA/sw.js", {
-    scope: "/ICS2O-Template-PWA/",
+  navigator.serviceWorker.register("/ICS2O-Unit3-02-JS/sw.js", {
+    scope: "/ICS2O-Unit3-02-JS/",
   })
 }
 
 // function description
 
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function submit() {
+  // input
+  const baseLength = parseFloat(document.getElementById("base-length").value)
+  const baseWidth = parseFloat(document.getElementById("base-width").value)
+  const pyramidHeight = parseFloat(document.getElementById("pyramid-height").value)
+
+  // process
+  const pyramidVolume = (baseLength * baseWidth * pyramidHeight) / 3
+
+  // output
+  document.getElementById("pyramidVolume").innerHTML =
+    "Volume of the pyramid is: " + pyramidVolume.toFixed(2)
 }
